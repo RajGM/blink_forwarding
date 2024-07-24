@@ -11,6 +11,9 @@ app.all('*', async (req, res) => {
   const ngrokUrl = 'https://c511-49-43-116-53.ngrok-free.app'; // Replace with your Ngrok address
   const targetUrl = `${ngrokUrl}${req.originalUrl}`;
 
+    console.log("URL:",req.url)
+    console.log("BODY:", req.body)
+    
   try {
     const response = await axios({
       method: req.method,
