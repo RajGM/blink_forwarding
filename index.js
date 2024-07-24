@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Catch-all route to forward any request
 app.all('*', async (req, res) => {
-  const ngrokUrl = 'http://your_ngrok_address'; // Replace with your Ngrok address
+  const ngrokUrl = 'https://c511-49-43-116-53.ngrok-free.app'; // Replace with your Ngrok address
   const targetUrl = `${ngrokUrl}${req.originalUrl}`;
 
   try {
